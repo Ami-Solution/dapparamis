@@ -61,7 +61,7 @@ defaultConfig.requiredNetwork = [
   'Unknown' //allow local RPC for testing
 ];
 
-class Dapparatus extends Component {
+class Dapparamis extends Component {
   constructor(props) {
     super(props);
     let config = defaultConfig;
@@ -115,7 +115,7 @@ class Dapparatus extends Component {
     clearInterval(interval);
   }
   checkMetamask() {
-    if (this.state.config.DEBUG) console.log('DAPPARATUS - checking state...');
+    if (this.state.config.DEBUG) console.log('DAPPARAMIS - checking state...');
     if (typeof window.web3 == 'undefined') {
       console.log('Connecting to infura...');
       window.web3 = new Web3(this.props.fallbackWeb3Provider); //CORS ISSUES!//
@@ -124,13 +124,13 @@ class Dapparatus extends Component {
     }
 
     if (typeof window.web3 == 'undefined') {
-      if (this.state.config.DEBUG) console.log('DAPPARATUS - no web3');
+      if (this.state.config.DEBUG) console.log('DAPPARAMIS - no web3');
       if (this.state.status == 'loading') {
         this.setState({ status: 'noweb3' }, () => {
           this.props.onUpdate(this.state);
         });
       } else if (this.state.status != 'noweb3') {
-        if (this.state.config.DEBUG) console.log('DAPPARATUS - lost web3');
+        if (this.state.config.DEBUG) console.log('DAPPARAMIS - lost web3');
         window.location.reload(true);
         this.setState({ status: 'error' }, () => {
           this.props.onUpdate(this.state);
@@ -138,7 +138,7 @@ class Dapparatus extends Component {
       }
     } else {
       if (this.state.config.DEBUG)
-        console.log('DAPPARATUS - yes web 3', window.web3);
+        console.log('DAPPARAMIS - yes web 3', window.web3);
       if (typeof window.web3.version.getNetwork != 'function') {
         window.window.web3.eth.net.getId((err, network) => {
           //console.log("NETWORK GETID",err,network)
@@ -152,19 +152,19 @@ class Dapparatus extends Component {
     }
   }
   inspectNetwork(network) {
-    if (this.state.config.DEBUG) console.log('DAPPARATUS - network', network);
+    if (this.state.config.DEBUG) console.log('DAPPARAMIS - network', network);
     network = translateNetwork(network);
     if (this.state.config.DEBUG)
-      console.log('DAPPARATUS - translated network', network);
+      console.log('DAPPARAMIS - translated network', network);
     let accounts;
     try {
       if (this.state.config.DEBUG)
-        console.log('DAPPARATUS - getting accounts...');
+        console.log('DAPPARAMIS - getting accounts...');
       window.web3.eth.getAccounts((err, _accounts) => {
         //console.log("ACCOUNTS",err,_accounts)
         if (!_accounts || _accounts.length <= 0 || this.state.web3Fellback) {
           if (this.state.config.DEBUG)
-            console.log('DAPPARATUS - no inject accounts - generate? ');
+            console.log('DAPPARAMIS - no inject accounts - generate? ');
           if (!this.state.metaAccount || !this.state.metaAccount.address) {
             this.setState({ status: 'noaccount' }, () => {
               this.props.onUpdate(this.state);
@@ -178,7 +178,7 @@ class Dapparatus extends Component {
           }
         } else {
           if (this.state.config.DEBUG)
-            console.log('DAPPARATUS - injected account: ', _accounts);
+            console.log('DAPPARAMIS - injected account: ', _accounts);
           this.inspectAccounts(_accounts, network);
           this.setState({ metaAccount: false });
         }
@@ -192,7 +192,7 @@ class Dapparatus extends Component {
   inspectAccounts(currentAccounts, network) {
     if (this.state.config.DEBUG)
       console.log(
-        'DAPPARATUS - accounts:',
+        'DAPPARAMIS - accounts:',
         currentAccounts,
         this.state.account
       );
@@ -237,7 +237,7 @@ class Dapparatus extends Component {
           }
         }
         if (this.state.config.DEBUG)
-          console.log('DAPPARATUS - etherscan', etherscan);
+          console.log('DAPPARAMIS - etherscan', etherscan);
         if (
           this.state.status != 'ready' ||
           this.state.block != block ||
@@ -300,9 +300,9 @@ class Dapparatus extends Component {
     });
   }
   render() {
-    let dapparatus = 'loading.';
+    let dapparamis = 'loading.';
     if (this.state.status == 'loading') {
-      dapparatus = (
+      dapparamis = (
         <a target="_blank" href="https://metamask.io/">
           <span style={this.state.config.textStyle}>loading...</span>
           <img
@@ -312,7 +312,7 @@ class Dapparatus extends Component {
         </a>
       );
     } else if (this.state.status == 'noweb3') {
-      dapparatus = (
+      dapparamis = (
         <a target="_blank" href="https://metamask.io/">
           <span style={this.state.config.textStyle}>No Web3 Connection</span>
           <img
@@ -326,11 +326,11 @@ class Dapparatus extends Component {
         window.open('https://metamask.io', '_blank');
       };
       if (this.state.config.metatxAccountGenerator) {
-        dapparatus =
+        dapparamis =
           'Connecting to ' + this.state.config.metatxAccountGenerator + '...';
         window.location = this.state.config.metatxAccountGenerator;
       } else {
-        dapparatus = 'Generating Account...';
+        dapparamis = 'Generating Account...';
         let result = window.web3.eth.accounts.create();
         //console.log("GENERATE",result)
         const expires = new Date();
@@ -343,7 +343,7 @@ class Dapparatus extends Component {
       }
 
       /*
-      dapparatus = (
+      dapparamis = (
         <div style={this.state.config.boxStyleBefore}>
           <Button color={"blue"} onClick={()=>{
 
@@ -358,7 +358,7 @@ class Dapparatus extends Component {
         </div>
       )*/
     } else if (this.state.status == 'locked') {
-      dapparatus = (
+      dapparamis = (
         <div style={this.state.config.boxStyleBefore}>
           <span style={this.state.config.warningStyle}>
             Please Unlock MetaMask
@@ -370,7 +370,7 @@ class Dapparatus extends Component {
         </div>
       );
     } else if (this.state.status == 'error') {
-      dapparatus = (
+      dapparamis = (
         <div>
           <span style={this.state.config.warningStyle}>Error Connecting</span>
           <img
@@ -391,7 +391,7 @@ class Dapparatus extends Component {
         this.state.config.requiredNetwork &&
         this.state.config.requiredNetwork.indexOf(this.state.network) < 0
       ) {
-        dapparatus = (
+        dapparamis = (
           <div>
             <span style={this.state.config.warningStyle}>
               Please switch network to {requiredNetworkText}
@@ -422,7 +422,7 @@ class Dapparatus extends Component {
           displayName = this.state.ens;
         }
 
-        dapparatus = (
+        dapparamis = (
           <div style={this.state.config.boxStyle}>
             <a
               target="_blank"
@@ -464,18 +464,18 @@ class Dapparatus extends Component {
         );
       }
     } else {
-      dapparatus = 'error unknown state: ' + this.state.status;
+      dapparamis = 'error unknown state: ' + this.state.status;
     }
     return (
       <div style={this.state.config.outerBoxStyle}>
         <Scaler config={{ origin: 'top right', adjustedZoom: 1.5 }}>
-          {dapparatus}
+          {dapparamis}
         </Scaler>
       </div>
     );
   }
 }
-export default Dapparatus;
+export default Dapparamis;
 
 function translateNetwork(network) {
   if (network == 5777) {

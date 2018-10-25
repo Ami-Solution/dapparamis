@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Dapparatus, Gas, ContractLoader, Transactions, Events, Scaler, Blockie, Address, Button } from "dapparatus"
+import { Dapparamis, Gas, ContractLoader, Transactions, Events, Scaler, Blockie, Address, Button } from "dapparamis"
 import Web3 from 'web3';
 
 //requires some stuff to be installed:
 //  bouncer-proxy -> clevis test full
-//  mkdir ~/dapparatus/demoapp/src/contracts
-//  cp ~/bouncer-proxy/src/contracts/* ~/dapparatus/demoapp/src/contracts/
-//  mkdir ~/dapparatus/demoapp/Example
-//  cp ~/bouncer-proxy/Example/* ~/dapparatus/demoapp/Example/
+//  mkdir ~/dapparamis/demoapp/src/contracts
+//  cp ~/bouncer-proxy/src/contracts/* ~/dapparamis/demoapp/src/contracts/
+//  mkdir ~/dapparamis/demoapp/Example
+//  cp ~/bouncer-proxy/Example/* ~/dapparamis/demoapp/Example/
 //  in demoapp: clevis test publish
 
 const METATX = {
   endpoint:"http://0.0.0.0:10001/",
   contract:"0xf5bf6541843D2ba2865e9aeC153F28aaD96F6fbc",
-  //accountGenerator: "//account.metatx.io",
+  //accountGenerator: "//ami-solution.github.io/amis-accountGenerator",
 }
 
 class App extends Component {
@@ -131,7 +131,7 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <Dapparatus
+        <Dapparamis
           config={{
             DEBUG:false,
             requiredNetwork:['Unknown','Rinkeby'],

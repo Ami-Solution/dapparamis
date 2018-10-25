@@ -1,17 +1,19 @@
 {
-  "name": "dapparatus",
-  "version": "1.0.25",
-  "description": "reusable dapp components in react: metamask, automatic gas, transaction ui, event parers etc...",
+  "name": "dapparamis",
+  "version": "1.0.26",
+  "description": "reusable dapp components in react: metamask, automatic gas, transaction ui, event parsers etc...",
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --open --mode development",
-    "build": "webpack"
+    "start:dev": "webpack-dev-server --open --mode development",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack --mode production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/austintgriffith/dapparatus.git"
+    "url": "git+https://github.com/ami-solution/dapparamis.git"
   },
   "keywords": [
     "dapp",
@@ -21,12 +23,12 @@
     "transactions",
     "buidl"
   ],
-  "author": "Austin Thomas Griffith",
+  "author": "Ami-Solution",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/austintgriffith/dapparatus/issues"
+    "url": "https://github.com/ami-solution/dapparamis/issues"
   },
-  "homepage": "https://github.com/austintgriffith/dapparatus#readme",
+  "homepage": "https://github.com/ami-solution/dapparamis#readme",
   "peerDependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0"

@@ -1,4 +1,4 @@
-import Dapparatus from './dapparatus';
+import Dapparamis from './dapparamis';
 import Gas from './gas';
 import Metamask from './metamask';
 import Web3 from './metamask';
@@ -15,7 +15,7 @@ import Button from './button';
 
 /*
 export default {
-  Dapparatus,
+  Dapparamis,
   Gas,
   Metamask,
   Web3,
@@ -41,7 +41,7 @@ module.exports['Scaler']=Scaler
 module.exports['Blockie']=Blockie
 module.exports['Address']=Address
 module.exports['Button']=Button
-module.exports['Dapparatus']=Dapparatus
+module.exports['Dapparamis']=Dapparamis
 //module.exports['QRCodeScanner']=QRCodeScanner
 //module.exports['QRCodeDisplay']=QRCodeDisplay
 //module.exports['ERC20Icon']=ERC20Icon
