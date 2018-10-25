@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "clevis": "0.0.77",
-    "dapparatus": "^1.0.20",
+    "dapparamis": "^1.0.20",
     "mocha": "^5.2.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",

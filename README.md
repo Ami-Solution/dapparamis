@@ -1,4 +1,23 @@
-# 📦📃DapparAmis
+# 👒
+👞
+🌂
+💼
+👝
+👛
+👓
+☕️
+🍵
+🍶 Dappar 📊
+📈
+📉 Amis 🍫
+🍬
+🍭
+🍯
+🍎
+🍋
+🍒
+🍇
+🍉
 
 After building out a handful of Dapps in React, I decided to carve out all the common components and provide them in an NPM package.
 
@@ -9,12 +28,13 @@ Watch the demo video using Dapparamis over in the [Clevis repo](https://github.c
 A good example and development walkthrough is
 [nifties-vs-nfties](https://github.com/austintgriffith/nifties-vs-nfties/blob/master/README.md).
 
-## install
+🍏
+## install 
 
 ```
 npm install --save dapparamis
 ```
-
+👜
 ## import
 
 ```
@@ -22,7 +42,7 @@ import { Metamask, Gas, ContractLoader, Transactions, Events, Scaler, Blockie, A
 ```
 
 ## usage
-
+🎣
 ### DapparAmis
 
 ```javascript
@@ -55,7 +75,7 @@ const WEB3_PROVIDER = 'http://0.0.0.0:8545'
         
 
 ### Metamask
-
+🍊
 Looks for injected web3 and provides an interface to the rest of the components. Also displays a nice HUD for users to see what account is logged in, what network they are on, and how much Ethereum they have. 
 
 ```javascript
@@ -192,6 +212,6 @@ Scales components based on a target screen width vs actual screen width. Get you
 
 ### Demo App
 
-Demoapp is a demo app I built that uses Dapparamis for Amis transactions:
+Demoapp is a demo app that uses Dapparamis for Amis transactions:
 
 
