@@ -12,36 +12,36 @@ A good example and development walkthrough is
 ## install
 
 ```
-npm install --save dapparatus
+npm install --save dapparamis
 ```
 
 ## import
 
 ```
-import { Metamask, Gas, ContractLoader, Transactions, Events, Scaler, Blockie, Address, Button } from "dapparatus"
+import { Metamask, Gas, ContractLoader, Transactions, Events, Scaler, Blockie, Address, Button } from "dapparamis"
 ```
 
 ## usage
 
-### Dapparatus
+### DapparAmis
 
 ```javascript
 
 const AMIS = {
   endpoint:"http://0.0.0.0:10001/",
-  contract:"0xf5bf6541843D2ba2865e9aeC153F28aaD96F6fbc",
-  //accountGenerator: "//account.metatx.io",
+  contract:"0x949bed886c739f1a3273629b3320db0c5024c719",
+  //accountGenerator: "//account.github.io",
 }
 const WEB3_PROVIDER = 'http://0.0.0.0:8545'
 
 
-<Dapparatus
+<Dapparamis
   config={{
     DEBUG:false,
     requiredNetwork:['Unknown','Rinkeby'],
   }}
   replaceName={replaceName}
-  metatx={AMIS}
+  amistx={AMIS}
   fallbackWeb3Provider={new Web3.providers.HttpProvider(WEB3_PROVIDER)}
   onUpdate={(state)=>{
    console.log("metamask state update:",state)
