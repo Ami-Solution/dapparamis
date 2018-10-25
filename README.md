@@ -1,10 +1,10 @@
-# 📦📃Dapparat.us
+# 📦📃DapparAmis
 
 After building out a handful of Dapps in React, I decided to carve out all the common components and provide them in an NPM package.
 
 Should help get a Dapp up and running quickly so you can focus on your functionality, not wrestling with the blockchain and ethereum network.
 
-Watch the demo video using Dapparatus over in the [Clevis repo](https://github.com/austintgriffith/clevis).
+Watch the demo video using Dapparamis over in the [Clevis repo](https://github.com/austintgriffith/clevis).
 
 A good example and development walkthrough is
 [nifties-vs-nfties](https://github.com/austintgriffith/nifties-vs-nfties/blob/master/README.md).
@@ -27,7 +27,7 @@ import { Metamask, Gas, ContractLoader, Transactions, Events, Scaler, Blockie, A
 
 ```javascript
 
-const METATX = {
+const AMIS = {
   endpoint:"http://0.0.0.0:10001/",
   contract:"0xf5bf6541843D2ba2865e9aeC153F28aaD96F6fbc",
   //accountGenerator: "//account.metatx.io",
@@ -41,7 +41,7 @@ const WEB3_PROVIDER = 'http://0.0.0.0:8545'
     requiredNetwork:['Unknown','Rinkeby'],
   }}
   replaceName={replaceName}
-  metatx={METATX}
+  metatx={AMIS}
   fallbackWeb3Provider={new Web3.providers.HttpProvider(WEB3_PROVIDER)}
   onUpdate={(state)=>{
    console.log("metamask state update:",state)
@@ -192,7 +192,6 @@ Scales components based on a target screen width vs actual screen width. Get you
 
 ### Demo App
 
-Ether Jam Jam is a demo app I built that uses Dapparatus for meta transactions:
+Demoapp is a demo app I built that uses Dapparamis for Amis transactions:
 
-[![etherjamjam](https://user-images.githubusercontent.com/2653167/46258946-4e6e0280-c48f-11e8-854d-261b9fd7d152.png)](https://youtu.be/cNcSXovVPdg)
 
