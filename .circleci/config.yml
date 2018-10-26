@@ -50,10 +50,6 @@ jobs:
           command: npm install -g clevis
           
       - run:
-          name: clevis init
-          command: clevis init
-          
-      - run:
           name: clevis create test
           command: clevis create test
           
