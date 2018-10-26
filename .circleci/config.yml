@@ -49,9 +49,9 @@ jobs:
       - run:
           name: bash -c 'cd ~'
           command: bash -c '
-            cd ~;
-            npm i;
-            npm run build'
+     #      cd ~;
+            npm i'
+     #      npm run build'
      #      pm2 restart build/server'
 
       - run:
@@ -68,5 +68,5 @@ jobs:
      #    command: clevis create test
           
       - run:
-          name: clevis compile 
-          command: clevis compile
+          name: clevis compile .
+          command: clevis compile .
