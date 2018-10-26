@@ -51,8 +51,12 @@ jobs:
           command: npm install -g clevis
           
       - run:
-          name: clevis init && create test
-          command: clevis init && create test
+          name: clevis init 
+          command: clevis init | echo "src"
+          
+      - run:
+          name: create test
+          command: create test
           
       - run:
           name: clevis compile test
