@@ -51,7 +51,7 @@ jobs:
           command: bash -c '
             cd ~
             npm i
-            npm run build
+            npm run build'
      #      pm2 restart build/server'
 
      #- run:
