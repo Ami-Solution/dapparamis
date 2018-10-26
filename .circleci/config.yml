@@ -52,7 +52,8 @@ jobs:
           
       - run:
           name: clevis init 
-          command: clevis init | echo "src"
+          command: |
+            clevis init
           
       - run:
           name: create test
