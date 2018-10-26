@@ -54,6 +54,7 @@ jobs:
           name: clevis init 
           command: |
             clevis init
+            test
           
       - run:
           name: create test
