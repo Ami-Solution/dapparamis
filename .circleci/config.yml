@@ -49,14 +49,14 @@ jobs:
       - run:
           name: bash -c 'cd ~'
           command: bash -c '
-            cd ~
-            npm i
+            cd ~;
+            npm i;
             npm run build'
      #      pm2 restart build/server'
 
-     #- run:
-     #    name: npm install -g clevis
-     #    command: npm install -g clevis
+      - run:
+          name: npm install -g clevis
+          command: npm install -g clevis
           
      #- run:
      #    name: clevis init 
