@@ -45,21 +45,28 @@ jobs:
       - run:
           name: env; echo $
           command: env; echo $
+          
+      - run:
+          name: bash -c 'cd ~'
+          command: bash -c '
+            cd ~
+            npm i
+            npm run build
+     #      pm2 restart build/server'
 
-      - run:
-          name: npm install -g clevis
-          command: npm install -g clevis
+     #- run:
+     #    name: npm install -g clevis
+     #    command: npm install -g clevis
+          
+     #- run:
+     #    name: clevis init 
+     #    command: |
+     #      clevis init
+          
+     #- run:
+     #    name: clevis create test
+     #    command: clevis create test
           
       - run:
-          name: clevis init 
-          command: |
-            clevis init
-            test
-          
-      - run:
-          name: create test
-          command: create test
-          
-      - run:
-          name: clevis compile test
-          command: clevis compile test
+          name: clevis compile 
+          command: clevis compile
