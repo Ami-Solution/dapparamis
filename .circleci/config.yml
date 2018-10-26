@@ -46,9 +46,9 @@ jobs:
           name: env; echo $
           command: env; echo $
           
-      - run:
-          name: bash -c 'cd ~'
-          command: bash -c 'npm i'
+    # - run:
+     #    name: bash -c 'cd ~'
+     #    command: bash -c 'npm i'
      #      cd ~;
      #      npm i'
      #      npm run build'
@@ -67,6 +67,6 @@ jobs:
      #    name: clevis create test
      #    command: clevis create test
           
-      - run:
-          name: clevis compile .
-          command: clevis compile .
+     #- run:
+     #    name: clevis compile .
+     #    command: clevis compile .
