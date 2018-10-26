@@ -57,6 +57,6 @@ jobs:
           name: clevis create test
           command: clevis create test
           
-       - run:
+      - run:
           name: clevis compile test
           command: clevis compile test
