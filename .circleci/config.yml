@@ -48,9 +48,9 @@ jobs:
           
       - run:
           name: bash -c 'cd ~'
-          command: bash -c '
+          command: bash -c 'npm i'
      #      cd ~;
-            npm i'
+     #      npm i'
      #      npm run build'
      #      pm2 restart build/server'
 
