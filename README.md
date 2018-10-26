@@ -1,19 +1,21 @@
 # 👒
 👞
 🌂
-💼
 👝
 👛
 👓
 ☕️
 🍵
-🍶 Dappar 📊
-📈
-📉 Amis 🍫
+### Dappar 📊📈📉 Amis 🍫
 🍬
 🍭
+## CI Dev status
+[![CircleCI](https://circleci.com/gh/Ami-Solution/dapparamis/tree/glitch.svg?style=svg)](https://circleci.com/gh/Ami-Solution/dapparamis/tree/glitch)
+💼
 🍯
 🍎
+## CI Prod status
+[![CircleCI](https://circleci.com/gh/Ami-Solution/dapparamis.svg?style=svg)](https://circleci.com/gh/Ami-Solution/dapparamis)
 🍋
 🍒
 🍇
@@ -23,10 +25,13 @@ After building out a handful of Dapps in React, I decided to carve out all the c
 
 Should help get a Dapp up and running quickly so you can focus on your functionality, not wrestling with the blockchain and ethereum network.
 
-Watch the demo video using Dapparamis over in the [Clevis repo](https://github.com/austintgriffith/clevis).
+Watch the demo video using Clevis over in the [Clevis repo](https://github.com/austintgriffith/clevis).
 
 A good example and development walkthrough is
 [nifties-vs-nfties](https://github.com/austintgriffith/nifties-vs-nfties/blob/master/README.md).
+
+and DapparAmis:
+[DapparAmis](https://github.com/ami-solution/daparamis/blob/master/README.md).
 
 🍏
 ## install 
@@ -75,7 +80,7 @@ const WEB3_PROVIDER = 'http://0.0.0.0:8545'
         
 
 ### Metamask
-🍊
+:japanese_goblin:
 Looks for injected web3 and provides an interface to the rest of the components. Also displays a nice HUD for users to see what account is logged in, what network they are on, and how much Ethereum they have. 
 
 ```javascript
@@ -92,7 +97,7 @@ Looks for injected web3 and provides an interface to the rest of the components.
 ```
 
 ### Gas
-
+:fuelpump:
 Keeps track of the best gas price in gwei and delivers it to other components.
 
 ```javascript
@@ -107,7 +112,7 @@ Keeps track of the best gas price in gwei and delivers it to other components.
 ```
 
 ### Transactions
-
+:ledger:
 Displays transactions and blocks as progress bars and provides a **tx** function to make calling smart contract functions and sending transactions easier and more transparent to the user.
 
 ```javascript
@@ -128,7 +133,7 @@ Displays transactions and blocks as progress bars and provides a **tx** function
 ```
 
 ## ContractLoader
-
+:nut_and_bolt:
 Loads your contracts published from [Clevis](https://github.com/austintgriffith/clevis) into **this.state.contracts**.
 
 ```javascript
@@ -143,7 +148,7 @@ Loads your contracts published from [Clevis](https://github.com/austintgriffith/
 ```
 
 ### Events
-
+🍊
 Listens for events and parses down the chain. Use an **id** field for unique keys so it will only fire the **onUpdate** function when a new event is detected. Provide a **filter** object to filter indexed fields.
 
 ```javascript
@@ -162,7 +167,7 @@ Listens for events and parses down the chain. Use an **id** field for unique key
 ```
 
 ### Address
-
+:postbox:
 Renders an address with the blockie (identicon) and the current balance in Eth. 
 
 ```javascript
@@ -173,7 +178,7 @@ Renders an address with the blockie (identicon) and the current balance in Eth.
 ```
 
 ### Button
-
+:radio_button:
 Renders a button
 
 ```javascript
@@ -200,7 +205,7 @@ Renders an identicon for an address
 
 
 ### Scaler
-
+:straight_ruler:
 Scales components based on a target screen width vs actual screen width. Get your Dapp looking awesome on mobile.
 
 ```javascript
